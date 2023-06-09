@@ -39,6 +39,7 @@ After running the main Python file, the platform will continuously monitor eleva
 For more detailed information on the Autonomous Elevator Maintenance Platform's implementation and integration, please refer to the `docs` folder.
 
 Contact and Support
+
 If you encounter any issues or have suggestions for the project, you can contact us through the GitHub "Issues" or "Discussions" sections.
 
 License
