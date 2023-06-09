@@ -1,0 +1,9 @@
+"getting_": This file contains the necessary steps and prerequisites to get started with the Autonomous Elevator Maintenance Platform.
+"integration_": This file provides instructions on how to integrate the platform with existing elevator systems.
+"iot_": This file offers details about the setup, configuration, and usage of IoT devices.
+"": This file provides technical information about the sensors used for monitoring elevator performance.
+"data_": This file includes information about the functioning of the data collection module and how collected data is stored.
+"data_": This file contains explanations on how collected data is processed, analyzed, and converted into useful information for elevator status.
+"maintenance_": This file contains details about the functioning of the maintenance application, how maintenance needs are identified, and how maintenance tasks are scheduled.
+"notification_": This file provides information about the configuration, functioning, and how notifications are sent according to maintenance requirements.
+"": This file offers steps and tips for diagnosing and solving potential issues.
