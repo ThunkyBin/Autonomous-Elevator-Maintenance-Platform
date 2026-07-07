@@ -1,4 +1,4 @@
-"import IoT_devices
+import IoT_devices
 import sensors
 import data_collection
 import data_processing
@@ -33,4 +33,4 @@ def main():
         platform.automate_maintenance()
 
 if __name__ == '__main__':
-    main()"
+    main()
