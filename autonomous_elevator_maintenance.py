@@ -4,6 +4,9 @@ import data_collection
 import data_processing
 import maintenance_application
 import notification_system
+import time
+
+POLL_INTERVAL_SECONDS = 60
 
 class AutonomousElevatorMaintenancePlatform:
 
@@ -31,6 +34,7 @@ def main():
     while True:
         platform.monitor_elevator_performance()
         platform.automate_maintenance()
+        time.sleep(POLL_INTERVAL_SECONDS)
 
 if __name__ == '__main__':
     main()
