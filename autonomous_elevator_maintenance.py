@@ -4,6 +4,7 @@ import data_collection
 import data_processing
 import maintenance_application
 import notification_system
+import argparse
 import time
 
 POLL_INTERVAL_SECONDS = 60
@@ -28,13 +29,26 @@ class AutonomousElevatorMaintenancePlatform:
         if maintenance_requirements:
             self.notification_system.send_notifications(maintenance_requirements)
             self.maintenance_application.schedule_maintenance_tasks(maintenance_requirements)
+        return maintenance_requirements
+
+    def run_cycle(self):
+        self.monitor_elevator_performance()
+        return self.automate_maintenance()
 
 def main():
+    parser = argparse.ArgumentParser(description="Run the autonomous elevator maintenance demo.")
+    parser.add_argument("--once", action="store_true", help="Run one monitoring cycle and exit.")
+    parser.add_argument("--interval", type=int, default=POLL_INTERVAL_SECONDS, help="Polling interval in seconds.")
+    args = parser.parse_args()
+
     platform = AutonomousElevatorMaintenancePlatform()
+    if args.once:
+        platform.run_cycle()
+        return
+
     while True:
-        platform.monitor_elevator_performance()
-        platform.automate_maintenance()
-        time.sleep(POLL_INTERVAL_SECONDS)
+        platform.run_cycle()
+        time.sleep(args.interval)
 
 if __name__ == '__main__':
     main()

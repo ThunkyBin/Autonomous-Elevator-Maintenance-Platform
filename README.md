@@ -25,12 +25,21 @@ runs the monitoring loop.
 
 ## Run
 
+Local Node demo:
+
 ```bash
-python autonomous_elevator_maintenance.py
+npm start
+```
+
+Python prototype:
+
+```bash
+python autonomous_elevator_maintenance.py --once
 ```
 
 ## Notes
 
-The current code is a prototype and expects project-specific modules such as
-`IoT_devices`, `sensors`, `data_collection`, `data_processing`,
-`maintenance_application`, and `notification_system`.
+The Python prototype includes lightweight local modules for IoT devices,
+sensors, data collection, data processing, maintenance scheduling, and
+notifications. The Node demo mirrors the same monitoring cycle for environments
+where Python is not installed.
